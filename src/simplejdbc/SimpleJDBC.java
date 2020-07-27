@@ -52,8 +52,9 @@ public class SimpleJDBC {
         } catch(SQLException ex) {
             System.out.println("Tidak dapat terhubung ke DBMS, error message:");
             System.err.println(ex.getMessage());
+        } finally {
+            System.out.println("+-------+--------------------------------+----------------------+------------+------+");
         }
-        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
     }
     
     private final static void clearConsole() throws InterruptedException {
