@@ -34,7 +34,7 @@ public class SimpleJDBC {
         String leftAlign = "| %-5s | %-30s | %-20s | %-10s | %-5s|%n";
         System.out.println("+-------+--------------------------------+----------------------+------------+------+");
         System.out.println("| ID    | Title                          | Author               | Price      | Qty  |");
-        System.out.println("+-------+--------------------------------+----------------------+-------------------+");
+        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
         try{
             Connection conn=(Connection)ConnectDB.connectDB();
             Statement stt=conn.createStatement();
@@ -49,11 +49,11 @@ public class SimpleJDBC {
                 System.out.format(leftAlign, id, title, author, price, qty);
             }
             stt.close();
-        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
         } catch(SQLException ex) {
             System.out.println("Tidak dapat terhubung ke DBMS, error message:");
             System.err.println(ex.getMessage());
         }
+        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
     }
     
     private final static void clearConsole() throws InterruptedException {
