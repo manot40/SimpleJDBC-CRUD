@@ -178,6 +178,7 @@ public class SimpleJDBC {
                 
             }catch(NumberFormatException ex){
                 System.out.println("Input Invalid!");
+		Thread.sleep(1500);
             }
         }
     } 
