@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.util.Scanner;
 /**
  *
+ * @TP2 Soal Nomor 5
+ * @NIM 2201860355
  * @author Kevin Sandiho
  */
 public class SimpleJDBC {
