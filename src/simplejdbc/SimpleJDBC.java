@@ -73,8 +73,11 @@ public class SimpleJDBC {
     }
     
     public static void main(String args[]) throws InterruptedException {
-        int pilihan;
         Scanner input = new Scanner(System.in);
+        String title, author;
+        float price;
+        int id, qty, pilihan;
+        
         while(true){
             getData();
             System.out.println("\nPilih Salah satu menu dibawah ini :");
@@ -85,9 +88,6 @@ public class SimpleJDBC {
             System.out.print("\nMasukan angka menu pilihan kamu : ");
             pilihan = input.nextInt();
             
-            String title, author;
-            float price;
-            int id, qty;
             switch(pilihan){
                 case 1:
                     System.out.println("Masukan detail data baru");
