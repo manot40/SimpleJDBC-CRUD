@@ -31,10 +31,10 @@ public class SimpleJDBC {
     }
     
     private static void getData(){
-        String leftAlign = "| %-5s | %-30s | %-20s | %-10s | %-5s|%n";
-        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
-        System.out.println("| ID    | Title                          | Author               | Price      | Qty  |");
-        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
+            String leftAlign = "| %-5s | %-30s | %-20s | %-10s | %-5s|%n";
+            System.out.println("+-------+--------------------------------+----------------------+------------+------+");
+            System.out.println("| ID    | Title                          | Author               | Price      | Qty  |");
+            System.out.println("+-------+--------------------------------+----------------------+------------+------+");
         try{
             Connection conn=(Connection)ConnectDB.connectDB();
             Statement stt=conn.createStatement();
