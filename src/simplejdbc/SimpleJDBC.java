@@ -31,10 +31,10 @@ public class SimpleJDBC {
     }
     
     private static void getData(){
-            String leftAlign = "| %-5s | %-30s | %-20s | %-10s | %-5s|%n";
-            System.out.println("+-------+--------------------------------+----------------------+------------+------+");
-            System.out.println("| ID    | Title                          | Author               | Price      | Qty  |");
-            System.out.println("+-------+--------------------------------+----------------------+------------+------+");
+        String leftAlign = "| %-5s | %-30s | %-20s | %-10s | %-5s|%n";
+        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
+        System.out.println("| ID    | Title                          | Author               | Price      | Qty  |");
+        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
         try{
             Connection conn=(Connection)ConnectDB.connectDB();
             Statement stt=conn.createStatement();
@@ -52,9 +52,8 @@ public class SimpleJDBC {
         } catch(SQLException ex) {
             System.out.println("Tidak dapat terhubung ke DBMS, error message:");
             System.err.println(ex.getMessage());
-        } finally {
-            System.out.println("+-------+--------------------------------+----------------------+------------+------+");
         }
+        System.out.println("+-------+--------------------------------+----------------------+------------+------+");
     }
     
     private final static void clearConsole() throws InterruptedException {
@@ -80,6 +79,7 @@ public class SimpleJDBC {
         int id, qty, pilihan;
         
         while(true){
+            clearConsole();
             getData();
             System.out.println("\nPilih Salah satu menu dibawah ini :");
             System.out.println("1.) Penambahan Data");
@@ -112,7 +112,6 @@ public class SimpleJDBC {
                         System.out.println("Tidak dapat terhubung ke DBMS, error message:");
                         System.err.println(ex.getMessage());
                     }
-                    clearConsole();
                     break;
                 
                 case 2:
@@ -139,7 +138,6 @@ public class SimpleJDBC {
                         System.out.println("Tidak dapat terhubung ke DBMS, error message:");
                         System.err.println(ex.getMessage());
                     }
-                    clearConsole();
                     break;
                     
                 case 3:
@@ -156,7 +154,6 @@ public class SimpleJDBC {
                         System.out.println("Tidak dapat terhubung ke DBMS, error message:");
                         System.err.println(ex.getMessage());
                     }
-                    clearConsole();
                     break;
                     
                 case 4:
@@ -165,7 +162,6 @@ public class SimpleJDBC {
                 
                 default:
                     System.out.println("Pilihan Invalid!");
-                    clearConsole();
                     break;
             }
         }
